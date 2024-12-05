@@ -1,0 +1,174 @@
+
+body {
+
+    background-color: #171414;
+    color: #ffffff;
+
+}
+
+@property --loginBannerAngle {
+
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+@property --loginHandleAngle {
+
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+#loginBanner {
+
+    width: 1020px;
+    height: 100px; 
+
+    position: relative;
+    
+    margin: 10% auto;
+    
+    background-color: #421111;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+
+} 
+
+#loginBanner p {
+
+    font-size: 84px;
+    padding: 4px 0px;
+    margin-top: 0px;
+
+}
+
+#loginBanner ::after {
+
+    content: "";
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    z-index: -1;
+    padding: 12px;
+
+    background-image: conic-gradient(from var(--loginBannerAngle), transparent 50%, #d30000);
+
+    border-radius: 12px;
+
+    animation: 3s spinB linear infinite;
+
+}
+
+@keyframes spinB {
+
+    from {
+        --loginBannerAngle: 0deg;
+    }
+    to {
+        --loginBannerAngle: 360deg;
+    }
+
+}
+
+#loginHandle {
+
+    width: 800px;
+    height: 220px;
+
+    position: relative;
+
+    margin: 10% auto;
+
+    border: 12px solid #d30000;
+    border-radius: 12px;
+
+}
+
+#loginHandle label {
+
+    width: fit-content;
+    height: fit-content;
+
+    position: relative;
+
+    background-color: #421111;
+    border: 3px solid #421111;
+    border-radius: 12px;
+    top: 5%;
+    left: 26%;
+
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 48px;
+
+    text-align: center;
+
+}
+
+#loginHandle input[type="password"] {
+
+    width: 600px;
+    height: 70px;    
+
+    position: relative;
+
+    left: 50%;
+    translate: -50% 0;
+    margin-top: 18px;
+    
+    background-color: black;
+    color: rgb(102, 198, 102);
+
+    font-weight: bolder;
+    font-size: 56px;
+    text-align: center;
+    
+    border: 4px solid black;
+    border-radius: 12px; 
+
+}
+
+#loginHandle input[type="password"]:focus {
+    border-color: #d30000;
+    border-width: 5px;
+}
+
+#loginHandle button[type="submit"] {
+    
+    width: 200px;
+    height: 30px;
+
+    position: relative;
+
+    left: 50%;
+    translate: -50% 0;
+    margin-top: 18px;
+
+    background-color: #302929;
+    border: 4px solid #302929;
+    border-radius: 12px;
+    
+    font-weight: bolder;
+    font-size: 18px;
+    color: rgb(235, 219, 219);
+    text-align: center;
+    
+}

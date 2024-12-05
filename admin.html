@@ -9,6 +9,8 @@
         <meta name="Created By:" content="Anel Salibašić II F GMS">
         <meta name="Description" content="Website for hosting small chess tournaments. PRIVATE USE INTENTED">
 
+        <title> Welcome, Administrator </title>
+
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap" rel="stylesheet">
         <link href="styles/index.css" rel="stylesheet" type="text/css">
         <link href="assets/icon.png" rel="icon" type="image/x-icon">
@@ -17,7 +19,20 @@
 
     <body>
 
-        <script src="scripts/index.js"></script>
+        <div id="loginBanner">
+            <p>Please login to start matchmaking</p>
+        </div>
+
+        <div id="loginHandle">
+            <label for="key">Administrator key</label>
+            <form onsubmit="tryLogin(event)">
+                <input type="password" id="key" required autocomplete="off">
+                <br>
+                <button type="submit" content="Enter">Log in</button>
+            </form>
+        </div>
+
+        <script src="scripts/manageAdminLogin.js"></script>
     </body>
 
 </html>

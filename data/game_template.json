@@ -1,0 +1,11 @@
+{
+    "White": "A",
+    "Black": "B",
+    "WTime": 600000,
+    "BTime": 600000,
+    "Turn": "white",
+    "WCastle": 3,
+    "BCastle": 3,
+    "Moves": [],
+    "State": "In session"
+}
